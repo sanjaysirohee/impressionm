@@ -1,16 +1,18 @@
 <?php
-
+$baseurl = $_SERVER['SERVER_NAME'];
+//echo $baseurl;
+if($baseurl=='localhost')
+{
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "impressionm";
-
-
- /* $servername = "localhost";
- $username = "veloxnc1_veloxndbun";
- $password = "india@vbd121";
- $dbname = "veloxnc1_veloxndb"; */
-
+$dbname = "impressionmdb";
+}else{
+ $servername = "localhost";
+ $username = "impressionmachinery_db";
+ $password = "9QazuqfcFSmUuNcZfdjb";
+ $dbname = "impressionmachinery_db";
+}
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

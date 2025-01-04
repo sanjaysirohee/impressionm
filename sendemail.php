@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if (isset($_POST['vercode'])) {
+  if ((empty($_SESSION["vercode"])) || ($_SESSION["vercode"] != $_POST['vercode'])) {
+    die("<script>alert('Invalid Verification Code'); history.back();</script>");
+  }
+}
 
 require 'config.php';
 
@@ -12,8 +17,8 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 // Define some constants
-define("RECIPIENT_NAME", "Veloxn Private Limited");
-define("RECIPIENT_EMAIL", "sanjaykr.pm@gmail.com");
+define("RECIPIENT_NAME", "Trip Technician");
+define("RECIPIENT_EMAIL", "veloxnservices@gmail.com");
 
 
 // Read the form values
@@ -21,121 +26,50 @@ $success = false;
 $userName = isset($_POST['full_name']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['full_name']) : "";
 $senderEmail = isset($_POST['email']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email']) : "";
 $userPhone = isset($_POST['phone_number']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone_number']) : "";
-$userSubject = isset($_POST['subject']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject']) : "";
+$userSubject = isset($_POST['subjectV']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['subjectV']) : "";
+$userPage = isset($_POST['userPage']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['userPage']) : "";
 $message = isset($_POST['message']) ? preg_replace("/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message']) : "";
- $subjectV = $_POST['subjectV'];
+$subjectV = $_POST['subjectV'];
 
 // If all values exist, send the email
 
-$sql = "INSERT INTO req_query_table(full_name,phone_number,email,message, subject)VALUES ('$userName','$userPhone','$senderEmail','$message','$userSubject')";
 
-
+$ip_address=$_SERVER['REMOTE_ADDR'];
+/*Get user ip address details with geoplugin.net*/
+$geopluginURL='http://www.geoplugin.net/php.gp?ip='.$ip_address;
+$addrDetailsArr = unserialize(file_get_contents($geopluginURL));
+/*Get City name by return array*/
+$city = $addrDetailsArr['geoplugin_city'];
+/*Get Country name by return array*/
+$country = $addrDetailsArr['geoplugin_countryName'];
+/*Comment out these line to see all the posible details*/
+/*echo '<pre>';
+print_r($addrDetailsArr);
+die();*/
+if(!$city){
+   $city='Not Define';
+}if(!$country){
+   $country='Not Define';
+}
+$userLocation = $city .', '. $country;
+//$userPage = $_SERVER['REQUEST_URI'];
   
 if ($userName && $senderEmail && $userPhone && $message) {
 
     // PHPMailer classes into the global namespace
 
     // create object of PHPMailer class with boolean parameter which sets/unsets exception.
+	$sql = "INSERT INTO req_query_table(full_name,phone_number,email,message,Location,subject,vpage_url)VALUES ('$userName','$userPhone','$senderEmail','$message','$userLocation','$userSubject','$userPage')";
 	
-	
-   if ($subjectV == 'EducationManagementSystem') {
+	if ($conn->query($sql) === TRUE) {
+   if ($subjectV == 'HomePage') {
     $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+School+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'SocialNetworkingSoftware') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Social+Networking+Software.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'HospitalManagementSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Hospital+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'ProjectManagementSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Project+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'RestaurantPOSSoftware') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Restaurant+POS+Software.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'ElectionCampaign') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Election+Campaign.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'HotelManagementSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Hotel+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'OnlineLearningandExaminationSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+online+Learning+and+Examination+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'RealEstateSolutions') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Real+Estate+Solutions.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'GSTBillingSoftware') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+GST+Billing+Software.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'PayRollAndHRSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+PayRoll+And+HR+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'EmployeeAttendanceManagementSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Employee+Attendance+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'InventorySoftware') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Inventory+Software.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'ShoppingWebsiteSoftwares') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Shopping+Website+Softwares.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'SoftwareDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Software+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'WebsitesDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Websites+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'MobileAPPsDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Mobile+APPs+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'e-CommerceDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+e-Commerce+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'DataServices') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Data+Services.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'e-PublishingSolutions') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+e-Publishing+Solutions.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'OnlineMarketing') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Online+Marketing.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'SEOServices') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+SEO+Services.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'ContentWritingServices') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Content+Writing+Services.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'SoftwareMaintenanceServices') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Software+Maintenance+Services.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'WebHostingServices') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Web+Hosting+Services.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'DomainRegistration') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Domain+Registration.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'PayPerClick') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Pay+Per+Click.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'AdvertisingSystem') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Advertising+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'SocialMediaOptimization') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Social+Media+Optimization.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'DigitalMarketing') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Digital+Marketing.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'BrandingandPromotion') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Branding+and+Promotion.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'OtherPromotionals') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Other+Promotionals.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'PropertyPortalDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Property+Portal+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'QRCodeSolution') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+QR+Code+Solution.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  } elseif ($subjectV == 'Java/J2EEDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Java/J2EE+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'Microsoft.NETDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Microsoft.NET+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'PHPDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+PHP+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'RubyonRails(RoR)Development') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Ruby+on+Rails(RoR)+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'DataWarehouse') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Data+Warehouse.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'AndroidDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Android+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'iOSDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+iOS+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'WindowsDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Windows+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'PhoneGapDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+Phone+Gap+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'CMSDevelopment') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+CMS+Development.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'HTML/CSS/JQuery/AJAX') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+HTML/CSS/JQuery/AJAX.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }elseif ($subjectV == 'RDBMSasBack-end') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+RDBMS+as+Back-end.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-  }else {
+ }else {
     $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
   }
 
 	
-  $url = 'https://chatbot.veloxn.com/api/send?number=91' . $userPhone . $Message . '&instance_id=6741B26012C4E&access_token=6738ba3b60674';
+  $url = 'https://chatbot.veloxn.com/api/send?number=91' . $userPhone . $Message . '&instance_id=674DD02565CFD&access_token=674c6add3ef92';
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -145,7 +79,7 @@ if ($userName && $senderEmail && $userPhone && $message) {
   if (curl_errno($ch)) {
     echo 'Error: ' . curl_error($ch);
   }
-  
+}
   
     $mail = new PHPMailer(true);
 
@@ -344,11 +278,6 @@ if ($userName && $senderEmail && $userPhone && $message) {
 </html>';
 
     // Template end
-	
-
-  
-
-
     try {
         $mail->SMTPDebug = 0;  //SMTP debug
         $mail->isSMTP(); // using SMTP protocol
@@ -399,10 +328,10 @@ if ($userName && $senderEmail && $userPhone && $message) {
     // $success = mail($recipient, $headers, $msgBody);
 
     //Set Location After Successsfull Submission
-    header('Location: contact-message-submitted.html#body');
+    header('Location: https://impressionmachinery.veloxn.com/index.html');
 } else {
     //Set Location After Unsuccesssfull Submission
-    header('Location: index.html?message=Failed');
+    header('Location: https://impressionmachinery.veloxn.com/index.html');
 }
 
 ?>
