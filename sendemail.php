@@ -17,7 +17,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 // Define some constants
-define("RECIPIENT_NAME", "Trip Technician");
+define("RECIPIENT_NAME", "Impression Machinery India Private Limited");
 define("RECIPIENT_EMAIL", "veloxnservices@gmail.com");
 
 
@@ -62,10 +62,12 @@ if ($userName && $senderEmail && $userPhone && $message) {
 	$sql = "INSERT INTO req_query_table(full_name,phone_number,email,message,Location,subject,vpage_url)VALUES ('$userName','$userPhone','$senderEmail','$message','$userLocation','$userSubject','$userPage')";
 	
 	if ($conn->query($sql) === TRUE) {
-   if ($subjectV == 'HomePage') {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+School+Management+System.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
- }else {
-    $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+ if ($subjectV == 'Manual Heat Press Machine') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Manual+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'ContactPage') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}else {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
   }
 
 	

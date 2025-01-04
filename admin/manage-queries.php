@@ -59,7 +59,7 @@ include_once ('header.php');
                                         <th>Query Page Name</th>
                                         <th>Date Time</th>
                                         <th>Query Location</th>
-										<th>Query Page Name</th>
+										<th>Query Page URL</th>
                                     </tr>
                                 </thead>
 
@@ -104,7 +104,7 @@ include_once ('header.php');
                                                 <?= $res_blog['Location']; ?>
                                             </td>
                                            <td>
-                                                <?= $res_blog['vpage_url']; ?>
+										   <a href="<?= $res_blog['vpage_url']; ?>" target="_blank"><?= $res_blog['subject']; ?> Page</a>
                                             </td>
                                         </tr>
                                     <?php  } ?>
