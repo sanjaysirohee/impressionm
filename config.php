@@ -6,7 +6,7 @@ if($baseurl=='localhost')
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "impressionm";
+$dbname = "impressionmdb";
 }else{
  $servername = "localhost";
  $username = "impressionmachinery_db";

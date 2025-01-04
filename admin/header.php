@@ -43,9 +43,9 @@ include ('config.php');
 
     <meta name="author" content="">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="https://veloxn.com/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://impressionmachinery.veloxn.com/images/favi/favicon-16x16.png">
 
-    <title>Veloxn Private Limited</title>
+    <title>Admin: Impression Machinery India Private Limited</title>
 
     <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
 
