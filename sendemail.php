@@ -269,7 +269,7 @@ if ($userName && $senderEmail && $userPhone && $message) {
               line-height: 26px;
               padding: 0px 15px;
             ">
-                    <b>With Veloxn Private Limited</b>
+                    <b>With Impression Machinery Private Limited</b>
                 </p>
             </td>
         </tr>
@@ -298,7 +298,7 @@ if ($userName && $senderEmail && $userPhone && $message) {
         );
         $mail->Port = 587;   // port for SMTP
 
-        $mail->setFrom('email@veloxn.com', "Veloxn Private Limited"); // sender's email and name
+        $mail->setFrom('email@veloxn.com', "Impression Machinery Private Limited"); // sender's email and name
         //$mail->addAddress('veloxnsales@gmail.com');
         // receiver's email and name
 
