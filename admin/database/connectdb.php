@@ -6,7 +6,7 @@ if($baseurl=='localhost')
 define("HOSTNAME","localhost");
 define("USERNAME","root");
 define("PASSWORD","");
-define("DATABASE","adotrippremiumdb");
+define("DATABASE","impressionmdb");
 }else{
 define("HOSTNAME","localhost");
 define("USERNAME","impressionmachinery_db");
