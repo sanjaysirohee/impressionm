@@ -66,6 +66,10 @@ if ($userName && $senderEmail && $userPhone && $message) {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Manual+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 }elseif ($subjectV == 'Automatic Double Bed Heat Press Machine') {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Double+Bed+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+	
+}elseif ($subjectV == 'Automatic Double Bed Lanyard Printing Machine') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Double+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+	
 }elseif ($subjectV == 'ContactPage') {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 }else {
