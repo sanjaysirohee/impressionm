@@ -18,7 +18,7 @@ require 'PHPMailer/src/SMTP.php';
 
 // Define some constants
 define("RECIPIENT_NAME", "Impression Machinery India Private Limited");
-define("RECIPIENT_EMAIL", "veloxnservices@gmail.com");
+define("RECIPIENT_EMAIL", "care@impressionmachinery.veloxn.com");
 
 
 // Read the form values
@@ -367,8 +367,8 @@ if ($userName && $senderEmail && $userPhone && $message) {
         $mail->isSMTP(); // using SMTP protocol
         $mail->Host = '103.133.214.192'; // SMTP host as gmail
         $mail->SMTPAuth = true;  // enable smtp authentication
-        $mail->Username = 'email@veloxn.com';  // sender gmail host
-        $mail->Password = 'vxn.vp@12!7#9'; // sender gmail host password
+        $mail->Username = 'care@impressionmachinery.veloxn.com';  // sender gmail host
+        $mail->Password = 'Imp@121#1'; // sender gmail host password
         $mail->SMTPSecure = 'tls';  // for encrypted connection
         $mail->isHTML(true);
         $mail->SMTPOptions = array(
@@ -380,12 +380,12 @@ if ($userName && $senderEmail && $userPhone && $message) {
         );
         $mail->Port = 587;   // port for SMTP
 
-        $mail->setFrom('email@veloxn.com', "Impression Machinery Private Limited"); // sender's email and name
+        $mail->setFrom('care@impressionmachinery.veloxn.com', "Impression Machinery Private Limited"); // sender's email and name
         //$mail->addAddress('veloxnsales@gmail.com');
         // receiver's email and name
 
         if ('Admin' == 'Admin') {
-            $mail->addAddress('veloxnservices@gmail.com', "Admin");
+            $mail->addAddress('care@impressionmachinery.veloxn.com', "Admin");
 			//$mail->addBcc('koshaorganic1@gmail.com', "Admin");
             $mail->Subject = 'Admin';
             $mail->Body = $AdminMessage;
