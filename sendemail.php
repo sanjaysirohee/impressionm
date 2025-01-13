@@ -118,86 +118,32 @@ if ($userName && $senderEmail && $userPhone && $message) {
 }elseif ($subjectV == 'MANUAL MACHINE') {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Manual+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'MUG PRINTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Mug+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SANDAL STONE PASTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Sandal+Stone+Pasting+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SEQUENCE SAREE PASTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Sequence+Saree+Pasting+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SHOES INSOLE EMBOSSING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Shoes+Insole+Embossing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SHOES UPPER PRINTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Shoes+Upper+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'STICKER PRINTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Sticker+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SWAROVSKI PASTING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Swarovski+Pasting+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'SWEAT SHIRTS & HOODIES EMBOSSING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Sweat+Shirts+&+Hoodies+Embossing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-	
-	}elseif ($subjectV == 'Automatic Single Bed Lanyard Printing Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Single+Bed+Lanyard+Printing+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+}elseif ($subjectV == 'ULTRA SONIC LANYARD WELDING MACHINE') {
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Ultra+Sonic+Lanyard+Welding+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
 }elseif ($subjectV == 'ContactPage') {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
