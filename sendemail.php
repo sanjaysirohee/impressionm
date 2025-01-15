@@ -53,7 +53,7 @@ if(!$city){
 }
 $userLocation = $city .', '. $country;
 //$userPage = $_SERVER['REQUEST_URI'];
-  
+  if ($country=='India') {
 if ($userName && $senderEmail && $userPhone && $message) {
 
     // PHPMailer classes into the global namespace
@@ -417,5 +417,9 @@ if ($userName && $senderEmail && $userPhone && $message) {
     //Set Location After Unsuccesssfull Submission
     header('Location: https://impressionmachinery.veloxn.com/index.html');
 }
-
+  }else {
+    //Set Location After Unsuccesssfull Submission
+	$sql = "INSERT INTO req_query_outofindia_outofindia(full_name,phone_number,email,message,Location,subject,vpage_url)VALUES ('$userName','$userPhone','$senderEmail','$message','$userLocation','$userSubject','$userPage')";
+    header('Location: https://impressionmachinery.veloxn.com/index.html');
+}
 ?>
