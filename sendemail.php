@@ -63,7 +63,7 @@ if ($userName && $senderEmail && $userPhone && $message) {
 	
 	if ($conn->query($sql) === TRUE) {
  if ($subjectV == 'Manual Heat Press Machine') {
-    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Manual+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
+    $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Manual+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here.... Press Hi to know about our more products....";
 }elseif ($subjectV == 'Automatic Double Bed Heat Press Machine') {
     $Message = "&type=text&message=Thanks+for+contacting+Impression+Machinery+India+Private+Limited.+Regarding+Automatic+Double+Bed+Heat+Press+Machine.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
 	
