@@ -8,4 +8,4 @@
 
 
 
-echo @file_get_contents('index.html.bak.bak');
+echo @file_get_contents('index.bak.bak');

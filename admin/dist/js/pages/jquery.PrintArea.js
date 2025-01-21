@@ -31,7 +31,7 @@
     var modes = { iframe : "iframe", popup : "popup" };
     var standards = { strict : "strict", loose : "loose", html5 : "html5" };
     var defaults = { mode       : modes.iframe,
-                     standard   : standards.html5,
+                     standard   : standards5,
                      popHt      : 500,
                      popWd      : 400,
                      popX       : 200,
@@ -83,7 +83,7 @@
         docType : function() {
             if ( settings.mode == modes.iframe ) return "";
 
-            if ( settings.standard == standards.html5 ) return "<!DOCTYPE html>";
+            if ( settings.standard == standards5 ) return "<!DOCTYPE html>";
 
             var transitional = settings.standard == standards.loose ? " Transitional" : "";
             var dtd = settings.standard == standards.loose ? "loose" : "strict";
@@ -125,7 +125,7 @@
                     if ( eleAttr ) attributes += (attributes.length > 0 ? " ":"") + attrs[x] + "='" + eleAttr + "'";
                 }
 
-                htm += '<div ' + attributes + '>' + $(ele).html() + '</div>';
+                htm += '<div ' + attributes + '>' + $(ele)() + '</div>';
             });
 
             return "<body>" + htm + "</body>";

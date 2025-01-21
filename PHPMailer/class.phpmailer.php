@@ -32,7 +32,7 @@
 
 |   License: Distributed under the Lesser General Public License (LGPL)     |
 
-|            http://www.gnu.org/copyleft/lesser.html                        |
+|            http://www.gnu.org/copyleft/lesser                        |
 
 | This program is distributed in the hope that it will be useful - WITHOUT  |
 
@@ -64,7 +64,7 @@
 
  * @copyright 2004 - 2009 Andy Prevost
 
- * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ * @license http://www.gnu.org/copyleft/lesser GNU Lesser General Public License
 
  */
 

@@ -441,7 +441,7 @@ jQuery(function ($) {
                message: $message.val()
             },
             function (data) {
-               $error.html(data);
+               $error(data);
                $error.slideDown('slow');
 
                if (data.match('success') != null) {

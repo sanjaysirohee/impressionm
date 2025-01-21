@@ -40,7 +40,7 @@ function initialize() {
     var map_zoom = current_item.data('zoom');
     var map_style = current_item.data('mapstyle');
     var map_title = current_item.data('title');
-    var map_descr = jQuery(current_item.data("popupstring-id")).html();
+    var map_descr = jQuery(current_item.data("popupstring-id"))();
     var map_pointer = current_item.data('marker');
 
     var mapOptions = {

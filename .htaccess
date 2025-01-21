@@ -1,0 +1,21 @@
+RewriteEngine on  # Activate the rewrite engine
+
+# Check if the requested URL is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check if the requested URL with "" appended exists as a file
+RewriteCond %{REQUEST_FILENAME} -f
+
+# Rewrite the URL to append "" if both conditions above are true
+RewriteRule ^(.*)$ $1
+
+RewriteEngine on  # Activate the rewrite engine
+
+# Check if the requested URL is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check if the requested URL with "" appended exists as a file
+RewriteCond %{REQUEST_FILENAME}.php -f
+
+# Rewrite the URL to append "" if both conditions above are true
+RewriteRule ^(.*)$ $1.php

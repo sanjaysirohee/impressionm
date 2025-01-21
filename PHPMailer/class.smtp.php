@@ -15,7 +15,7 @@
 | Copyright (c) 2001-2003, Brent R. Matzelle                                |
 | ------------------------------------------------------------------------- |
 |   License: Distributed under the Lesser General Public License (LGPL)     |
-|            http://www.gnu.org/copyleft/lesser.html                        |
+|            http://www.gnu.org/copyleft/lesser                        |
 | This program is distributed in the hope that it will be useful - WITHOUT  |
 | ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or     |
 | FITNESS FOR A PARTICULAR PURPOSE.                                         |
@@ -31,7 +31,7 @@
  * @copyright 2004 - 2008 Andy Prevost
  * @author Jim Jagielski
  * @copyright 2010 - 2012 Jim Jagielski
- * @license http://www.gnu.org/copyleft/lesser.html Distributed under the Lesser General Public License (LGPL)
+ * @license http://www.gnu.org/copyleft/lesser Distributed under the Lesser General Public License (LGPL)
  */
 
 /**
@@ -361,7 +361,7 @@ class SMTP {
          ** Bundled with Permission
          **
          ** How to telnet in windows: http://technet.microsoft.com/en-us/library/aa995718%28EXCHG.65%29.aspx
-         ** PROTOCOL Documentation http://curl.haxx.se/rfc/ntlm.html#ntlmSmtpAuthentication
+         ** PROTOCOL Documentation http://curl.haxx.se/rfc/ntlm#ntlmSmtpAuthentication
          */
         require_once('ntlm_sasl_client.php');
         $temp = new stdClass();

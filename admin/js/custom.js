@@ -118,7 +118,7 @@ var THEMEMASCOT = {};
             var bmi = ( parseFloat(weight_lbs) / (total_height_inc * total_height_inc) ) * 703;
             var output = THEMEMASCOT.bmiCalculator.magic(bmi);
 
-            bmi_form.find('#bmi_standard_calculator_form_result').html(output).fadeIn('slow');
+            bmi_form.find('#bmi_standard_calculator_form_result')(output).fadeIn('slow');
         },
         
         calculateMetric: function (bmi_form) {
@@ -132,7 +132,7 @@ var THEMEMASCOT = {};
             var bmi = ( total_weight_kg / (total_height_m * total_height_m) );
             var output = THEMEMASCOT.bmiCalculator.magic(bmi);
 
-            bmi_form.find('#bmi_metric_calculator_form_result').html(output).fadeIn('slow');
+            bmi_form.find('#bmi_metric_calculator_form_result')(output).fadeIn('slow');
         },
         
         init: function () {
@@ -234,7 +234,7 @@ var THEMEMASCOT = {};
             var ajaxLoadContent = false;
             if( ajaxLoadContent ) {
                 $.ajax({
-                    url: "ajax-load/bootstrap-parent-modal.html",
+                    url: "ajax-load/bootstrap-parent-modal",
                     success: function (data) { $body.append(data); },
                     dataType: 'html'
                 });
@@ -248,7 +248,7 @@ var THEMEMASCOT = {};
             var $style_switcher = $('#style-switcher');
             if( !$style_switcher.length && showSwitcher ) {
                 $.ajax({
-                    url: "color-switcher/style-switcher.html",
+                    url: "color-switcher/style-switcher",
                     success: function (data) { $body.append(data); },
                     dataType: 'html'
                 });
@@ -1331,7 +1331,7 @@ var THEMEMASCOT = {};
                         '<li>%M <span>Minutes</span></li>' +
                         '<li>%S <span>Seconds</span></li>' +
                         '</ul>';
-                    $(this).html(event.strftime(countdown_text));
+                    $(this)(event.strftime(countdown_text));
                 });
             }
         },

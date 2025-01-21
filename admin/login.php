@@ -84,7 +84,7 @@ include('config.php');
                         </div>
                       
                     </form>
-                    <form class="form-horizontal" id="recoverform" action="http://eliteadmin.themedesigner.in/demos/bt4/hospital/index.html">
+                    <form class="form-horizontal" id="recoverform" action="http://eliteadmin.themedesigner.in/demos/bt4/hospital/index">
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <h3>Recover Password</h3>
@@ -140,5 +140,5 @@ include('config.php');
 </body>
 
 
-<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 May 2019 09:19:55 GMT -->
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/pages-login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 May 2019 09:19:55 GMT -->
 </html>

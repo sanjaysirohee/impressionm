@@ -345,9 +345,9 @@ if (isset($_GET['p_id'])) {
 				str = str.replace('%', '').toLowerCase();
 				str = str.replace('@', '').toLowerCase();
 				str = str.replace(/\s+/g, '-').toLowerCase();
-				// var b_url_path = '<?php echo $site_url; ?>blogs/'+arch+'/'+str+'.html';
+				// var b_url_path = '<?php echo $site_url; ?>blogs/'+arch+'/'+str+'';
 				var b_url_path = '<?php echo BASE_URL; ?>blogs/' + str + '';
-				$(".b_url_path").html('<label>Blog Url: </label> ' + b_url_path + '');
+				$(".b_url_path")('<label>Blog Url: </label> ' + b_url_path + '');
 				//$("#b_url_key").val(arch+'/'+str);
 				$("#b_url_key").val(str);
 				// alert(curr_year+'-'+curr_month+'-'+curr_date);
@@ -403,7 +403,7 @@ if (isset($_GET['p_id'])) {
 	});
 
 	$("#del_img").click(function() {
-		$("#b_image").html('');
+		$("#b_image")('');
 		$("#b_old_image").val('');
 
 	});

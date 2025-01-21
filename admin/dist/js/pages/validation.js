@@ -262,7 +262,7 @@
                             $.error("Cannot find validation info for '" + el + "'");
                         }
                     });
-                    $helpBlock.data("original-contents", ($helpBlock.data("original-contents") ? $helpBlock.data("original-contents") : $helpBlock.html()));
+                    $helpBlock.data("original-contents", ($helpBlock.data("original-contents") ? $helpBlock.data("original-contents") : $helpBlock()));
                     $helpBlock.data("original-role", ($helpBlock.data("original-role") ? $helpBlock.data("original-role") : $helpBlock.attr("role")));
                     $controlGroup.data("original-classes", ($controlGroup.data("original-clases") ? $controlGroup.data("original-classes") : $controlGroup.attr("class")));
                     $this.data("original-aria-invalid", ($this.data("original-aria-invalid") ? $this.data("original-aria-invalid") : $this.attr("aria-invalid")));
@@ -323,10 +323,10 @@
                         if (errorsFound.length) {
                             $controlGroup.removeClass("validate error issue").addClass(formIsSubmitting ? "error" : "issue");
                             if (settings.options.semanticallyStrict && errorsFound.length === 1) {
-                                $helpBlock.html(errorsFound[0] + (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
+                                $helpBlock(errorsFound[0] + (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                             }
                             else {
-                                $helpBlock.html("<ul role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" + (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
+                                $helpBlock("<ul role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" + (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                             }
                         }
                         else {
@@ -334,7 +334,7 @@
                             if (value.length > 0) {
                                 $controlGroup.addClass("validate");
                             }
-                            $helpBlock.html($helpBlock.data("original-contents"));
+                            $helpBlock($helpBlock.data("original-contents"));
                         }
                         if (e.type === "blur") {
                             if (settings.options.removeSuccess) {}
@@ -353,7 +353,7 @@
                         , $form = $this.parents("form").first();
                     $this.unbind('.validation');
                     $form.unbind(".validationSubmit");
-                    $helpBlock.html($helpBlock.data("original-contents"));
+                    $helpBlock($helpBlock.data("original-contents"));
                     $controlGroup.attr("class", $controlGroup.data("original-classes"));
                     $this.attr("aria-invalid", $this.data("original-aria-invalid"));
                     $helpBlock.attr("role", $this.data("original-role"));

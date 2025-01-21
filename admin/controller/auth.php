@@ -1759,7 +1759,7 @@ if (isset($_POST['btn_terms']) && !empty($userSession)) {
     $query = mysqli_query($con, "insert into tbl_specialities_terms (heading,description,slug,seo_title,seo_des,speciality_id) values ('$heading','$specialities_des','$slug','$seo_title','$seo_des','$seo_key','$specialities_id')");
     if ($query) {
         $_SESSION['add_terms'] = 'Successfully Add Terms & Conditions..';
-        header('location:../terms-and-conitions.html?specialities_id=' . $specialities_id);
+        header('location:../terms-and-conitions?specialities_id=' . $specialities_id);
     }
 }
 
@@ -1771,7 +1771,7 @@ if (isset($_GET['terms_id']) && !empty($userSession)) {
     $query = mysqli_query($con, "delete from tbl_specialities_terms where terms_id='$terms_id'");
     if ($query) {
         $_SESSION['del_terms'] = 'Successfully Deleted Terms & Condition..';
-        header('location:../terms-and-conitions.html?specialities_id=' . $id);
+        header('location:../terms-and-conitions?specialities_id=' . $id);
     }
 }
 
@@ -1792,7 +1792,7 @@ if (isset($_POST['btn_update_terms']) && !empty($userSession)) {
     $query = mysqli_query($con, "update tbl_specialities_terms set heading='$heading',description='$specialities_des',slug='$slug',seo_title='$seo_title',seo_des='$seo_des',seo_key='$seo_key' where terms_id='$update_id'");
     if ($query) {
         $_SESSION['update_terms'] = 'Successfully Update Terms & Conditions..';
-        header('location:../terms-and-conitions.html?specialities_id=' . $specialities_id);
+        header('location:../terms-and-conitions?specialities_id=' . $specialities_id);
     }
 }
 

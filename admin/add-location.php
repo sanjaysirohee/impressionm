@@ -23,7 +23,7 @@ $fetch_cities = mysqli_query($con, "select * from tbl_cities");
             <div class="col-md-7 align-self-center text-right">
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index">Home</a></li>
                         <li class="breadcrumb-item active">Add Location</li>
                     </ol>
                 </div>

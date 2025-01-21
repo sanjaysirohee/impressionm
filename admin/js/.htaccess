@@ -10,5 +10,5 @@ RewriteRule . /index.php [L]
 ##Start Redirection Code## 
 Header always set Content-Security-Policy "upgrade-insecure-requests;"
 
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
+ErrorDocument 404 /404
+ErrorDocument 403 /403

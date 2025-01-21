@@ -317,7 +317,7 @@
 
 		function start() {
 			$slideshow
-				.html(settings.get('slideshowStop'))
+				(settings.get('slideshowStop'))
 				.unbind(click)
 				.one(click, stop);
 
@@ -336,7 +336,7 @@
 				.unbind(event_load, clear);
 
 			$slideshow
-				.html(settings.get('slideshowStart'))
+				(settings.get('slideshowStart'))
 				.unbind(click)
 				.one(click, function () {
 					publicMethod.next();
@@ -455,7 +455,7 @@
 			}).show();
 
 			if (settings.get('closeButton')) {
-				$close.html(settings.get('close')).appendTo($content);
+				$close(settings.get('close')).appendTo($content);
 			} else {
 				$close.appendTo('<div/>'); // replace with .detach() when dropping jQuery < 1.4
 			}
@@ -834,16 +834,16 @@
 			};
 
 
-			$title.html(settings.get('title')).show();
+			$title(settings.get('title')).show();
 			$loaded.show();
 
 			if (total > 1) { // handle grouping
 				if (typeof settings.get('current') === "string") {
-					$current.html(settings.get('current').replace('{current}', index + 1).replace('{total}', total)).show();
+					$current(settings.get('current').replace('{current}', index + 1).replace('{total}', total)).show();
 				}
 
-				$next[(settings.get('loop') || index < total - 1) ? "show" : "hide"]().html(settings.get('next'));
-				$prev[(settings.get('loop') || index) ? "show" : "hide"]().html(settings.get('previous'));
+				$next[(settings.get('loop') || index < total - 1) ? "show" : "hide"]()(settings.get('next'));
+				$prev[(settings.get('loop') || index) ? "show" : "hide"]()(settings.get('previous'));
 
 				slideshow();
 
@@ -975,7 +975,7 @@
 			$(photo)
 			.addClass(prefix + 'Photo')
 			.bind('error.'+prefix,function () {
-				prep($tag(div, 'Error').html(settings.get('imgError')));
+				prep($tag(div, 'Error')(settings.get('imgError')));
 			})
 			.one('load', function () {
 				if (request !== requests) {
@@ -1030,7 +1030,7 @@
 		} else if (href) {
 			$loadingBay.load(href, settings.get('data'), function (data, status) {
 				if (request === requests) {
-					prep(status === 'error' ? $tag(div, 'Error').html(settings.get('xhrError')) : $(this).contents());
+					prep(status === 'error' ? $tag(div, 'Error')(settings.get('xhrError')) : $(this).contents());
 				}
 			});
 		}

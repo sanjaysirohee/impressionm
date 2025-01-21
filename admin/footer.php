@@ -16,7 +16,7 @@
  <script src="assets/node_modules/peity/jquery.peity.init.js"></script>
  <script src="dist/js/dashboard1.js"></script>
  <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
- <script src="dist/js/pages/custom.min.html"></script>
+ <script src="dist/js/pages/custom.min"></script>
  <script src="assets/node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
  <script src="dist/js/pages/mask.init.js"></script>
  <script src="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
@@ -31,7 +31,7 @@
  <script src="cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
  <script src="cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
  <script src="cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
- <script src="cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+ <script src="cdn.datatables.net/buttons/1.5.1/js/buttons5.min.js"></script>
  <script src="cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
  <!-- end - This is for export functionality only -->
 

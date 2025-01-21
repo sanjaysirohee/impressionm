@@ -45,7 +45,7 @@
         
     this.original = {
       exists: this.$element.hasClass('fileinput-exists'),
-      preview: this.$preview.html(),
+      preview: this.$preview(),
       hiddenVal: this.$hidden.val()
     }
     
@@ -91,7 +91,7 @@
         // if parent has max-height, using `(max-)height: 100%` on child doesn't take padding and border into account
         if (preview.css('max-height') != 'none') $img.css('max-height', parseInt(preview.css('max-height'), 10) - parseInt(preview.css('padding-top'), 10) - parseInt(preview.css('padding-bottom'), 10)  - parseInt(preview.css('border-top'), 10) - parseInt(preview.css('border-bottom'), 10))
         
-        preview.html($img)
+        preview($img)
         element.addClass('fileinput-exists').removeClass('fileinput-new')
 
         element.trigger('change.bs.fileinput', files)
@@ -125,7 +125,7 @@
       this.$input.val('')
     }
 
-    this.$preview.html('')
+    this.$preview('')
     this.$element.find('.fileinput-filename').text('')
     this.$element.addClass('fileinput-new').removeClass('fileinput-exists')
     
@@ -139,7 +139,7 @@
     this.clear()
 
     this.$hidden.val(this.original.hiddenVal)
-    this.$preview.html(this.original.preview)
+    this.$preview(this.original.preview)
     this.$element.find('.fileinput-filename').text('')
 
     if (this.original.exists) this.$element.addClass('fileinput-exists').removeClass('fileinput-new')
