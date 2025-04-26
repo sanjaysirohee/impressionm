@@ -1951,7 +1951,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
-  min-height: 800px;
+  min-height: 300px;
 }
 
 .slide-title {
