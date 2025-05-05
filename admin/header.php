@@ -43,7 +43,7 @@ include ('config.php');
 
     <meta name="author" content="">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="https://impressionmachinery.veloxn.com/images/favi/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://impressionmipl.com/images/favi/favicon-16x16.png">
 
     <title>Admin: Impression Machinery India Private Limited</title>
 
