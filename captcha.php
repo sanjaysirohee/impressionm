@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-$text = rand(100000,999999); 
+$text = rand(1000,9999); 
 $_SESSION["vercode"] = $text; 
 $height = 25; 
 $width = 65;   

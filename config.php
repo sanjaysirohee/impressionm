@@ -9,9 +9,9 @@ $password = "";
 $dbname = "impressionmdb";
 }else{
  $servername = "localhost";
- $username = "impressionmachinery_db";
- $password = "9QazuqfcFSmUuNcZfdjb";
- $dbname = "impressionmachinery_db";
+ $username = "impressionmipl_crmdb";
+ $password = "Z7AG6xXRk5Cwxn5w9FqS";
+ $dbname = "impressionmipl_crmdb";
 }
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
