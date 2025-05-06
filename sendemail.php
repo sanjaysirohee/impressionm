@@ -412,14 +412,14 @@ if ($userName && $senderEmail && $userPhone && $message) {
     // $success = mail($recipient, $headers, $msgBody);
 
     //Set Location After Successsfull Submission
-    header('Location: https://impressionmipl.com/index');
+    header('Location: contact-message-submitted.html');
 } else {
     //Set Location After Unsuccesssfull Submission
-    header('Location: https://impressionmipl.com/index');
+    header('Location: contact-message-submitted.html');
 }
   }else {
     //Set Location After Unsuccesssfull Submission
 	$sql = "INSERT INTO req_query_outofindia_outofindia(full_name,phone_number,email,message,Location,subject,vpage_url)VALUES ('$userName','$userPhone','$senderEmail','$message','$userLocation','$userSubject','$userPage')";
-    header('Location: https://impressionmipl.com/index');
+    header('Location: https://impressionmipl.com');
 }
 ?>

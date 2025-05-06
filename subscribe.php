@@ -23,9 +23,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Your message has been sent. Thank you, " . $contact_name . ", we will contact you shortly.";
 
   // Prepare the message for API
-  $Message = "&type=text&message=Thanks+for+contacting+Veloxn+Private+Limited.+Regarding+your+Software+requirement.+We+will+get+back+to+you+soon,+you+can+post+more+queries+here....";
-
-  $url = 'https://chatbot.veloxn.com/api/send?number=91' . $contact_mobile . $Message . '&instance_id=65BE23AD95919&access_token=65bd128b57e2f';
+  
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -35,7 +33,7 @@ if ($conn->query($sql) === TRUE) {
     echo 'Error: ' . curl_error($ch);
   }
 
-  header('Location: contact-message-submitted.html#body');
+  header('Location: contact-message-submitted.html');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
