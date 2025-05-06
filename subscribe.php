@@ -2,11 +2,7 @@
 session_start();
 require 'config.php';
 
-if (isset($_POST['vercode'])) {
-  if ((empty($_SESSION["vercode"])) || ($_SESSION["vercode"] != $_POST['vercode'])) {
-    die("<script>alert('Invalid Verification Code'); history.back();</script>");
-  }
-}
+
 
 //$contact_name = $_POST['contact_name'];
 //$contact_mobile = $_POST['contact_mobile'];
