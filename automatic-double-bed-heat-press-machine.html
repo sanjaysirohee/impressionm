@@ -596,7 +596,7 @@ Do you need this paragraph tailored for a brochure, website, or technical catalo
       </section>
 
    <!-- Footer start-->
-     <footer class="footer" id="footer">
+    <footer class="footer" id="footer">
          <div class="footer-main bg-overlay">
             <div class="container">
                <div class="row">
@@ -610,16 +610,26 @@ Do you need this paragraph tailored for a brochure, website, or technical catalo
                      
 					 
 					 <h3 class="widget-title">Subscribe Newsletter!</h3>
-                     <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                   <!--  <form class="newsletter-form" id="newsletter-form" action="#" method="post">
                         <div class="form-group">
                            <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
-                              autocomplete="off">
+                              >
                            <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
                         </div>
-                     </form>
+                     </form>--><div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+					data-wow-delay="300ms">
+					<div class="footer-single">
+						<h6>Subscribe </h6>
+						<p>Please provide your Email ID here to get updated</p>
+						<form action="subscribe.php" method="post" class="subscribe" id="subcribe">
+							<input type="email" name="email" id="subscribe" placeholder="Email ID" required>
+							<input type="submit" value="&#8594;" id="subs" name="subscribe_submit">
+						</form>
+					</div>
+				</div>
 					 
                   </div>
-                  <!-- About us end-->
+				                    <!-- About us end-->
                   <div class="col-lg-4 col-md-6 footer-widget">
                      <h3 class="widget-title">Quick Links</h3>
                      <ul class="list-dash">
