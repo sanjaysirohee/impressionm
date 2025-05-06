@@ -7,7 +7,7 @@
     ==================================================
     -->
    <meta charset="utf-8">
-   <title>Single Service</title>
+   <title>News Left Sidebar</title>
    <!--
     Mobile Specific Metas
     ==================================================
@@ -79,13 +79,15 @@
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- Animation-->
    <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
    <!-- FontAwesome-->
    <link rel="stylesheet" href="css/font-awesome.min.css">
    <!-- Icon font-->
    <link rel="stylesheet" href="css/icon-font.css">
    <!-- Owl Carousel-->
    <link rel="stylesheet" href="css/owl.carousel.min.css">
-   <!-- Owl theme -->
+   <!-- Owl Theme -->
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <!-- Colorbox-->
    <link rel="stylesheet" href="css/colorbox.css">
@@ -93,7 +95,6 @@
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive styles-->
    <link rel="stylesheet" href="css/responsive.css">
-
    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
    <!--if lt IE 9
     script(src='js/html5shiv.js')
@@ -135,7 +136,6 @@
                                  <p class="info-subtitle">info@impressionmipl.com</p>
                               </div>
                            </li>
-                           
                         </ul>
                      </div>
                      <!-- Col End-->
@@ -182,7 +182,7 @@
                                  <li><a href="service">Services All</a></li>
                                  <li><a href="service-single">Services Single</a></li>
                               </ul>
-                           </li>
+                           </li>-->
                            <!-- li end-->
 						   <!--
                            <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Features<i class="fa fa-angle-down"></i></a>
@@ -199,13 +199,13 @@
                                     </ul>
                                  </li>
                               </ul>
-                           </li>
+                           </li>-->
                            <!-- li end-->
                            <li class="nav-item dropdown">
                               <a class="nav-link" href="#" data-toggle="dropdown">
-                         News
-                         <i class="fa fa-angle-down"></i>
-                       </a>
+                               News
+                               <i class="fa fa-angle-down"></i>
+                              </a>
                               <ul class="dropdown-menu" role="menu">
                                  <li><a href="news-left-sidebar">Blog With Right Sidebar</a></li>
                                  <li><a href="news-right-sidebar">Blog With Left Sidebar</a></li>
@@ -213,9 +213,7 @@
                               </ul>
                            </li>
                            <!-- li end-->
-                           
                            <li class="nav-item dropdown">
-                              
                                  <a href="contact">Contact</a>
                            </li>
                         </ul>
@@ -232,15 +230,15 @@
          <!-- Header end-->
       </div>
 
-      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/banner4.jpg);">
+      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/banner2.jpg);">
          <div class="container">
             <div class="row justify-content-center">
                <div class="col">
                   <div class="banner-heading">
-                     <h1 class="banner-title">Single Service</h1>
+                     <h1 class="banner-title">News</h1>
                      <ol class="breadcrumb">
                         <li>Home</li>
-                        <li><a href="#">service-single</a></li>
+                        <li><a href="newsS">news</a></li>
                      </ol>
                   </div>
                </div>
@@ -251,174 +249,182 @@
          <!-- Container end-->
       </div>
       <!-- Banner area end-->
+      
       <section class="main-container" id="main-container">
-
          <div class="container">
             <div class="row">
                <div class="col-lg-4">
-                  <h4 class="list-column-title">Company</h4>
-                  <div class="sidebar ">
-                     <div class="widget no-padding no-border">
-                        <ul class="service-menu">
-                           <li><a href="service-single">Air Freight</a></li>
-                           <li><a href="#">Ocean Freight</a></li>
-                           <li><a href="#">Cargo Express</a></li>
-                           <li><a href="#">Warehousing</a></li>
-                           <li><a href="#">Contract Logistics</a></li>
-                           <li><a href="#">Ground Transport</a></li>
+                  <div class="sidebar sidebar-left">
+                     <div class="widget widget-search">
+                        <div class="input-group" id="search">
+                           <input class="form-control" placeholder="Search" type="search"><span class="input-group-btn"><i class="fa fa-search"></i></span>
+                        </div>
+                     </div>
+                     <div class="widget recent-posts">
+                        <h3 class="widget-title">Popular Posts</h3>
+                        <ul class="unstyled clearfix">
+                           <li class="media">
+                              <div class="media-left media-middle">
+                                 <img alt="img" src="images/news/news1.jpg">
+                              </div>
+                              <div class="media-body media-middle"><span class="post-date"><i class="icon icon-calendar-full"></i><a href="#"> 19 Jan, 2018</a></span>
+                                 <h4 class="entry-title"><a href="news-single">Uber is selling off its auto-leasing</a>
+                                    <small>by Jhon</small>
+                                 </h4>
+                              </div>
+                              <div class="clearfix"></div>
+                           </li>
+                           <!-- 1st post end-->
+                           <li class="media">
+                              <div class="media-left media-middle">
+                                 <img alt="img" src="images/news/news2.jpg">
+                              </div>
+                              <div class="media-body media-middle"><span class="post-date"><i class="icon icon-calendar-full"></i><a href="#"> 24 Jan, 2018</a></span>
+                                 <h4 class="entry-title"><a href="news-single">Apple reveals its new flagship</a>
+                                    <small>by Jhon</small>
+                                 </h4>
+                              </div>
+                              <div class="clearfix"></div>
+                           </li>
+                           <!-- 2nd post end-->
+                           <li class="media">
+                              <div class="media-left media-middle">
+                                 <img alt="img" src="images/news/news3.jpg">
+                              </div>
+                              <div class="media-body media-middle"><span class="post-date"><i class="icon icon-calendar-full"></i><a href="#"> 27 Jan, 2018</a></span>
+                                 <h4 class="entry-title"><a href="news-single">Help your business grow with help</a>
+                                    <small>by Jhon</small>
+                                 </h4>
+                              </div>
+                              <div class="clearfix"></div>
+                           </li>
+                           <!-- 3rd post end-->
+                           
+                           <li class="media">
+                              <div class="media-left media-middle">
+                                 <img alt="img" src="images/news/news4.jpg">
+                              </div>
+                              <div class="media-body media-middle"><span class="post-date"><i class="icon icon-calendar-full"></i><a href="#"> 24 Jan, 2018</a></span>
+                                 <h4 class="entry-title"><a href="news-single">Jerky shank chicken boudin</a>
+                                    <small>by Jhon</small>
+                                 </h4>
+                              </div>
+                              <div class="clearfix"></div>
+                           </li>
+                           <!-- 4th post end -->
+                           
+                           <li class="media">
+                              <div class="media-left media-middle">
+                                 <img alt="img" src="images/news/news3.jpg">
+                              </div>
+                              <div class="media-body media-middle"><span class="post-date"><i class="icon icon-calendar-full"></i><a href="#"> 24 Jan, 2018</a></span>
+                                 <h4 class="entry-title"><a href="news-single">Who Actually Clicks on Banner Ads?</a>
+                                    <small>by Jhon</small>
+                                 </h4>
+                              </div>
+                              <div class="clearfix"></div>
+                           </li>
+                           <!-- 5th post end -->
                         </ul>
                      </div>
-                     <div class="widget no-padding testimonial-static">
-                        <div class="quote-item quote-classic"><span class="quote-text faq-quote-text">Explore top-quality printing machinery and get the best quote directly from our manager today!</span>
-                           <div class="quote-item-footer quote-footer-classic">
-                              <img class="testimonial-thumb" src="images/clients/testimonial1.jpg" alt="testimonial">
-                              <div class="quote-item-info">
-                                 <p class="quote-author">OM VEER SINGH</p><span class="quote-subtext">MD and CEO</span>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Quote item end-->
-                     </div>
+                     <!-- Recent post end-->
                   </div>
+                  <!-- Sidebar end-->
                </div>
-               <!-- Col end -->
+               <!-- Sidebar Col end-->
                <div class="col-lg-8">
-                  <div class="single-service-img">
-                     <img src="images/services/service1.jpg" alt="" />
-                  </div>
-                  <div class="service-content">
-                     <h2>Air Freight</h2>
-                     
-                     <div class="text-block mrb-40">
-                        <p>Mornings possession serenity wonderful has taken of my entire soul, like these sweet of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot which was created.</p>
-                        
-                        <p>Serenity Wonderful has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                  <div class="post news-post">
+                     <div class="post-media post-image">
+                        <img class="img-fluid" src="images/news/news3.jpg" alt="">
                      </div>
-					 <!--
-                        <h3 class="column-title">Delivery on your doorstep</h3>
-                     
-                        <div class="service-content">
-                           <div class="service-blocknumber">
-                              <div class="pull-left">
-                                 <span class="block-number">01</span>
+                     <div class="post-body clearfix">
+                        <!-- Post meta left-->
+                        <div class="post-content">
+                           <div class="entry-header">
+                              <div class="post-meta"><span class="post-cat"><i class="icon icon-folder"></i><a href="#"> Financial Planning</a></span>
+                                 <span class="post-tag"><i class="icon icon-tag"></i><a href="#"> Insurance, Business</a></span>
                               </div>
+                              <h2 class="entry-title"><a href="news-single">Uber is selling off its auto-leasing business</a></h2>
                            </div>
-                           <div class="service-content-area">
-                              <h3>On-board courier</h3>
-                              <p class="service-text">Serenity Wonderful has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
-                           </div>
-                        </div>
-                        <div class="service-content">
-                           <div class="service-blocknumber">
-                              <div class="pull-left">
-                                 <span class="block-number">02</span>
-                              </div>
-                           </div>
-                           <div class="service-content-area">
-                              <h3>Full loads shipments</h3>
-                              <p class="service-text">Serenity Wonderful has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
-                           </div>
-                        </div>
-                        <div class="service-content">
-                           <div class="service-blocknumber">
-                              <div class="pull-left">
-                                 <span class="block-number">03</span>
-                              </div>
-                           </div>
-                           <div class="service-content-area">
-                              <h3>Domestic air services</h3>
-                              <p class="service-text">Serenity Wonderful has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</p>
-                           </div>
-                        </div>
-						-->o
-                  </div>
-				  
-				  <!-- ak start form -->
-				  
-				  <div class="">
-                        
-                        <div class="contact-submit-box contact-box form-box">
-						 <h3 class="column-title">Contact Us</h3>
-                           <form action="sendemail.php" method="post">
-                              <div class="error-container"></div>
-                              <div class="row">
-                                 <div class="col-lg-12">
-                                    <div class="form-group">
-										<input type="hidden" name="subjectV" class="form-control" value="Manual Heat Press Machine">
-										<input type="hidden" name="userPage" class="form-control" value="https://impressionmipl.com/manual-heat-press-machine">
-                                       <input class="form-control form-name" id="name" name="full_name" placeholder="Full Name" type="text" required="">
-                                    </div>
-                                 </div>
-								 
-								 <div class="col-lg-12">
-                                    <div class="form-group">
-                                       <input class="form-control form-name" id="name" type="tel" name="phone_number" placeholder="Mobile Number" required="" pattern=".{10,10}" required title="Please enter your correct mobile number.">
-                                    </div>
-                                 </div>
-								 
-								 <!-- ak start form -->
-								 
-								 <div class="col-lg-12">
-                              <div class="form-group">
-                                 <input class="form-control form-email" id="email" name="email" placeholder="Email" type="email" required="">
-                              </div>
-                           </div>
-								
-                           <div class="col-lg-12">
-                              <div class="form-group">
-                                 <textarea class="form-control form-message required-field" id="message" name="message" placeholder="Type your message - Requirement, Query etc." rows="3" min="5" required></textarea>
-                              </div>
-                           </div>
-						   <div class="col-lg-12">
-						   <div class="form-group">
-								<input type="text" name="vercode" class="form-control"
-									placeholder=" Please enter the verfication code same as given below"
-									required="required">
-							</div>
-							</div>
-							
-							<br />
-							
-							<div class="text-right" style="width: 11%; float:left">
-						   <img src="captcha.php">
-						</div>
-
-						<div class="text-right" style="width: 87%; float:right">
-						  <input type="submit" name="submit" id="form-submit" class="pull-right" value="Send Message">
-						</div>
-							<br /><br />
-                           <!-- Col 12 end-->
-                        </div>
-
-                           </form>
-                           <!-- Form end-->
-                        </div>
-                     </div>
-				  
-				  <!-- ak end form -->
-				  
-				  
-                  <div id="call-to-action" class="call-to-action-bg service-call-to-action ">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-lg-8 align-self-center">
-                              <h3 class="call-to-action-title service-call-to-action">Delivery & return solutions worldwide</h3>
-                              <p>
-                                 We would love to hear from you, tell us little bit about your project
+                           <!-- header end-->
+                           <div class="entry-content">
+                              <p>Financial engagements typically multifaceted solving specific digital marketing and challenges
+                                 while building ongoing client capabilities. In addition to defining newer roles but helping
+                                 develop...
                               </p>
                            </div>
-                           <div class="col-lg-4 text-right">
-                              <a class="btn btn-box" href="">Call Now</a>
-                           </div>
+                           <div class="post-footer "><a class="btn btn-primary" href="news-single">Read More ...</a></div>
                         </div>
+                        <!-- Post content right-->
                      </div>
+                     <!-- post-body end-->
                   </div>
+                  <!-- 1st post end-->
+                  <div class="post news-post">
+                     <div class="post-media post-video">
+                        <img class="img-fluid" src="images/news/news2.jpg" alt="">
+                        <a class="popup" href="https://www.youtube.com/embed/XhveHKJWnOQ?autoplay=1&amp;loop=1">
+                           <div class="video-icon"><i class="icon icon-play"></i></div>
+                        </a>
+                     </div>
+                     <div class="post-body clearfix">
+                        <div class="post-content">
+                           <div class="entry-header">
+                              <div class="post-meta"><span class="post-cat"><i class="icon icon-folder"></i><a href="#"> Financial Planning</a></span>
+                                 <span class="post-tag"><i class="icon icon-tag"></i><a href="#"> Insurance, Business</a></span>
+                              </div>
+                              <h2 class="entry-title"><a href="news-single">Apple reveals its new Melbourne flagship store</a></h2>
+                           </div>
+                           <!-- header end-->
+                           <div class="entry-content">
+                              <p>Financial engagements typically multifaceted solving specific digital marketing and challenges
+                                 while building ongoing client capabilities. In addition to defining newer roles but helping
+                                 develop...
+                              </p>
+                           </div>
+                           <div class="post-footer "><a class="btn btn-primary" href="news-single">Read More ...</a></div>
+                        </div>
+                        <!-- Post content right-->
+                     </div>
+                     <!-- post-body end-->
+                  </div>
+                  <!-- 3rd post end-->
+                  <div class="post news-post">
+                     <div class="post-media post-image">
+                        <img class="img-fluid" src="images/news/news1.jpg" alt="">
+                     </div>
+                     <div class="post-body clearfix">
+                        <div class="post-content">
+                           <div class="entry-header">
+                              <div class="post-meta"><span class="post-cat"><i class="icon icon-folder"></i><a href="#"> Financial Planning</a></span>
+                                 <span class="post-tag"><i class="icon icon-tag"></i><a href="#"> Insurance, Business</a></span>
+                              </div>
+                              <h2 class="entry-title"><a href="news-single">Help your business grow with help from social media tool</a></h2>
+                           </div>
+                           <!-- header end-->
+                           <div class="entry-content">
+                              <p>Financial engagements typically multifaceted solving specific digital marketing and challenges
+                                 while building ongoing client capabilities. In addition to defining newer roles but helping
+                                 develop...
+                              </p>
+                           </div>
+                           <div class="post-footer "><a class="btn btn-primary" href="news-single">Read More ...</a></div>
+                        </div>
+                        <!-- Post content right-->
+                     </div>
+                     <!-- post-body end-->
+                  </div>
+                  <!-- 4th post end-->
+                  <!-- 4th post end-->
                </div>
+               <!-- Content Col end-->
             </div>
+            <!-- Main row end-->
          </div>
+         <!-- Container end-->
       </section>
 
-   <!-- Footer start-->
+    <!-- Footer start-->
        <footer class="footer" id="footer">
          <div class="footer-main bg-overlay">
             <div class="container">
