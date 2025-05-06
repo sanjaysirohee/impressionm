@@ -9,9 +9,9 @@ define("PASSWORD","");
 define("DATABASE","impressionmdb");
 }else{
 define("HOSTNAME","localhost");
-define("USERNAME","impressionmachinery_db");
-define("PASSWORD","9QazuqfcFSmUuNcZfdjb");
-define("DATABASE","impressionmachinery_db");
+define("USERNAME","impressionmipl_crmdb");
+define("PASSWORD","Z7AG6xXRk5Cwxn5w9FqS");
+define("DATABASE","impressionmipl_crmdb");
 }
 
 $con=new mysqli(HOSTNAME,USERNAME,PASSWORD,DATABASE) or die("Unable to connect");
