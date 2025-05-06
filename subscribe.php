@@ -7,8 +7,13 @@ $sql = "INSERT INTO subscribed_customer (email) VALUES ('$email')";
 if ($conn->query($sql) === TRUE) {
   echo "Your message has been sent. Thank you, " . $email . ", we will contact you shortly.";
 
+<<<<<<< Updated upstream
 
   $ch = curl_init();
+=======
+  // Prepare the message for API
+   $ch = curl_init();
+>>>>>>> Stashed changes
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   $result = curl_exec($ch);
