@@ -6084,7 +6084,7 @@ label {
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   width: 60px; /* Adjust the size of the icon as needed */
   height: auto;
   z-index: 9999; /* Ensure the icon is above other content */
