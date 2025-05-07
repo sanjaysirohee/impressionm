@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
     echo 'Error: ' . curl_error($ch);
   }
 
-  header('Location: contact-message-submitted.html');
+  header('Location: thank-you.html');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
