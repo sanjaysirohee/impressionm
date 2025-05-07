@@ -412,10 +412,10 @@ if ($userName && $senderEmail && $userPhone && $message) {
     // $success = mail($recipient, $headers, $msgBody);
 
     //Set Location After Successsfull Submission
-    header('Location: contact-message-submitted.html');
+    header('Location: thank-you.html');
 } else {
     //Set Location After Unsuccesssfull Submission
-    header('Location: contact-message-submitted.html');
+    header('Location: thank-you.html');
 }
   }else {
     //Set Location After Unsuccesssfull Submission
