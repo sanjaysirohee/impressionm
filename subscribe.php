@@ -13,11 +13,7 @@ if ($conn->query($sql) === TRUE) {
 
   // Prepare the message for API
    $ch = curl_init();
-<<<<<<< Updated upstream
 
-=======
-	
->>>>>>> Stashed changes
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   $result = curl_exec($ch);
